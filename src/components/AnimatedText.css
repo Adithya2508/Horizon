@@ -1,0 +1,48 @@
+/* AnimatedText.css */
+
+.text-container {
+    /* Optional: Centering the text container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #282c34; /* Background color for visibility */
+  }
+  
+  .animated-text {
+    font-size: 2rem; /* Adjust size as needed */
+    color: #fff; /* Text color */
+    font-family: Arial, sans-serif; /* Font style */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent line breaks */
+    display: inline-block; /* Ensure block-level properties work */
+    position: relative; /* Required for positioning the pseudo-elements */
+    /* For a cleaner animation */
+    transform: translateY(0);
+  }
+  
+  .animated-text::before {
+    content: attr(data-text); /* Use the data-text attribute */
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    color: #fff;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: reveal-text 5s steps(30) forwards; /* Adjust duration and steps as needed */
+  }
+  
+  /* Keyframes for the animation */
+  @keyframes reveal-text {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

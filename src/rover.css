@@ -1,0 +1,165 @@
+/* src/components/rover.css */
+.atext {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.rover-carousel-container {
+    width: 65%;
+    margin: 0 auto 5rem auto;
+    background: rgba(123, 74, 226, 0.08);
+    border: 2px solid rgb(123, 74, 226);
+    /* Purple border */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+}
+
+.rover-image-container {
+    position: relative;
+
+}
+
+.rover-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.rover-image-container:hover .hover-text {
+    opacity: 1;
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    z-index: 10;
+    position: absolute;
+}
+
+.custom-prev-arrow {
+    left: -50px;
+}
+
+.custom-next-arrow {
+    right: -50px;
+}
+
+.custom-prev-arrow:hover,
+.custom-next-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-prev-arrow i,
+.custom-next-arrow i {
+    font-size: 24px;
+}
+
+.slick-prev,
+.slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: black;
+}
+
+.linebox {
+    position: absolute;
+    left: 280px;
+    top: 350vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line1 {
+    height: 1px;
+    width: 480px;
+    background: #7B4AE2;
+    max-width: 100%;
+}
+
+.line2 {
+    width: 446px;
+    height: 116px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #7B4AE2;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .line1 {
+        width: 300px;
+    }
+
+    .line2 {
+        width: 300px;
+    }
+
+    .linebox {
+        left: 100px;
+        top: 250vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .line1 {
+        width: 250px;
+    }
+
+    .line2 {
+        width: 250px;
+    }
+
+    .linebox {
+        left: 50px;
+        top: 200vh;
+    }
+}
+
+.swipe-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 45%;
+    background: rgba(0, 0, 0, 0.5);
+    width: 20vmax;
+    padding: 2% 1rem;
+    border-radius: 5px;
+}
