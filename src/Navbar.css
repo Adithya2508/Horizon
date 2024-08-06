@@ -79,7 +79,7 @@
 
 .search-box {
     color: white;
-    width: 32%;
+    width: 27vw;
     height: 7vh;
     flex-shrink: 0;
     display: flex;
@@ -93,31 +93,25 @@
     border: 0.2vb solid white;
     padding-left: 2.1vb;
     padding-right: 2.1vb;
-    margin: 18vh auto;
+    margin:18vh auto;
 }
 
 
 .search-box p {
-    font-size: 1.1rem;
-    /* Adjust size as needed */
-    color: #fff;
-    /* Text color */
-    margin: 0 0.0001vb;
-    /* Spacing around the text */
-    overflow: hidden;
-    /* Hide overflow */
-    white-space: nowrap;
-    /* Prevent text from wrapping */
+    font-size: 1.1rem; /* Adjust size as needed */
+    color: #fff; /* Text color */
+    margin: 0 0.0001vb; /* Spacing around the text */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
     display: inline-block;
-    /* Allow for animations */
 }
 
 .letter {
     display: inline-block;
     opacity: 0;
     animation: fadeIn 0.5s forwards;
-}
-
+  }
+  
 @keyframes fadeIn {
     0% {
         opacity: 0;

@@ -7,6 +7,24 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const text = 'Official Website of Team Horizon Cusat';
+  
+  // Split text into letters with spans
+  const animatedText = text.split('').map((char, index) => (
+    <span
+      key={index}
+      className="letter"
+      style={{ 
+        animationDelay: `${index * 0.1}s`, // Adjust delay as needed
+        animationDuration: '0.5s',
+        animationName: 'fadeIn'
+      }}
+    >
+      {char === ' ' ? '\u00A0' : char} {/* Handle spaces */}
+    </span>
+  ));
+  
+
 
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);
@@ -29,7 +47,7 @@ const Navbar = () => {
             </nav>
             <div className='search-box'>
                 <FcGoogle size={25} />
-                <p>Official website of Team Horizon Cusat</p>
+                <p>{animatedText}</p>
                 <CiSearch size={25} color='white' />
             </div>
         </>
